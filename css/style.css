@@ -1,0 +1,77 @@
+.card-list {
+  display: flex;
+  gap: 2%;
+  list-style: none;
+  padding: 0;
+}
+
+.card-list__item {
+  width: calc(100% / 3);
+}
+
+.card {
+  display: block;
+}
+
+.card__image {
+  display: block;
+  width: 100%;
+}
+
+.card__button {
+  appearance: none;
+  background: #f1f1f1;
+  cursor: pointer;
+  height: 40px;
+  padding: 10px;
+  position: relative;
+  transition: .3s ease-in-out;
+  width: 100%;
+}
+
+.card__button.is-disabled {
+  background: #f1f1f1;
+  color: #707070;
+}
+
+/* ローディングアニメーション */
+.card__loading,
+.card__loading::after {
+  border-radius: 50%;
+  opacity: 0;
+  height: 15px;
+  width: 15px;
+}
+
+.card__button.is-disabled .card__loading,
+.card__button.is-disabled .card__loading::after {
+  opacity: 1;
+}
+
+.card__loading {
+  animation: loadAnime 2.5s linear;
+  border: 3px solid #313131;
+  border-left: 3px solid rgba(255, 255, 255, 0.4);
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) translateZ(0);
+  vertical-align: middle;
+}
+
+@keyframes loadAnime {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.card__popup-message {
+  margin: initial;
+  padding: 10px;
+  text-align: center;
+}
