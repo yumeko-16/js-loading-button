@@ -8,79 +8,75 @@
   <meta name="og:title" content="">
   <meta name="og:image" content="">
   <meta name="og:site_name" content="">
-  <title></title>
+  <title>Loading Button</title>
   <link rel="canonical" href="">
-  <link rel="stylesheet" href="">
-  <style>
-    button#baseObject {
-      width: 280px;
-      position: relative;
-      transition: 0.3s ease-in-out;
-    }
-
-    button#baseObject.click {
-      background: #f1f1f1;
-      color: #707070;
-    }
-
-    /* ローディングアニメーション */
-    #baseObject span,
-    #baseObject span:after {
-      display: none;
-      border-radius: 9999px;
-      width: 25px;
-      height: 25px;
-    }
-
-    button#baseObject.click span,
-    button#baseObject.click span:after {
-      display: inline-block;
-    }
-
-    #baseObject span {
-      position: absolute;
-      text-indent: -9999em;
-      border-top: 3px solid rgba(255, 255, 255, 0.4);
-      border-right: 3px solid rgba(255, 255, 255, 0.4);
-      border-bottom: 3px solid rgba(255, 255, 255, 0.4);
-      border-left: 3px solid #313131;
-      transform: translateZ(0);
-      animation: loadAnime 3s linear;
-      vertical-align: middle;
-      left: 20px;
-    }
-
-    @keyframes loadAnime {
-      0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-      }
-
-      100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-        opacity: 0;
-      }
-    }
-
-  </style>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/common.js" defer></script>
 </head>
 <body>
-  <button id="baseObject">
-    <span></span>ローディングボタン
-  </button>
+  <ul class="card-list">
+    <li
+      class="card-list__item card"
+      data-card-id="3"
+    >
+      <img
+        class="card__image"
+        src="/img/card003.jpg"
+        alt=""
+        width="320"
+        height="160"
+      >
+      <button
+        class="card__button"
+        data-button
+      >Good</button>
+      <p
+        class="card__popup-message"
+        data-popup
+      ></p>
+    </li>
 
-  <script>
-    const button = document.getElementById('baseObject');
+    <li
+      class="card-list__item card"
+      data-card-id="2"
+    >
+      <img
+        class="card__image"
+        src="/img/card002.jpg"
+        alt=""
+        width="320"
+        height="160"
+      >
+      <button
+        class="card__button"
+        data-button
+      >Good</button>
+      <p
+        class="card__popup-message"
+        data-popup
+      ></p>
+    </li>
 
-    button.addEventListener('click', () => {
-      button.className = 'click';
-      button.innerHTML = "<span></span>ローディング中";
-      setTimeout(() => {
-        button.className = button.className.replace('click', '');
-        button.innerHTML = '<span></span>ローディングボタン';
-      }, 3000);
-    });
-  </script>
+    <li
+      class="card-list__item card"
+      data-card-id="1"
+    >
+      <img
+        class="card__image"
+        src="/img/card001.jpg"
+        alt=""
+        width="320"
+        height="160"
+      >
+      <button
+        class="card__button"
+        data-button
+      >Good</button>
+      <p
+        class="card__popup-message"
+        data-popup
+      ></p>
+    </li>
+  </ul>
 </body>
 </html>
