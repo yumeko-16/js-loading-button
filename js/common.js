@@ -7,27 +7,27 @@ cards.forEach((card) => {
   const cardButton = card.querySelector('[data-button]');
   const cardPopup = card.querySelector('[data-popup]');
 
-  const disableButton = ((element) => {
+  const disableButton = (element) => {
     element.disabled = true;
     element.classList.add('is-disabled');
     element.style.cursor = 'not-allowed';
     element.innerHTML = '<span class="card__loading"></span>';
-  });
+  };
 
-  const enableButton = ((element) => {
+  const enableButton = (element) => {
     element.disabled = false;
     element.classList.remove('is-disabled');
     element.style.cursor = 'pointer';
     element.innerHTML = 'Good';
-  });
+  };
 
-  const showPopup = ((message) => {
+  const showPopup = (message) => {
     cardPopup.textContent = message;
-  });
+  };
 
-  const hidePopup = (() => {
+  const hidePopup = () => {
     cardPopup.textContent = '';
-  });
+  };
 
   cardButton.addEventListener('click', async () => {
     disableButton(cardButton);
