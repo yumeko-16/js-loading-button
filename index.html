@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
@@ -5,112 +6,103 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <meta
-      name="description"
-      content=""
-    />
-    <meta
-      name="author"
-      content=""
-    />
-    <meta
-      name="og:type"
-      content=""
-    />
-    <meta
-      name="og:title"
-      content=""
-    />
-    <meta
-      name="og:image"
-      content=""
-    />
-    <meta
-      name="og:site_name"
-      content=""
-    />
-    <title>Loading Button</title>
-    <link
-      rel="canonical"
-      href=""
-    />
+    <title>Photo square</title>
     <link
       rel="stylesheet"
-      href="/css/style.css"
+      href="/assets/css/style.css"
     />
     <script
-      src="/js/common.js"
+      src="/assets/js/common.js"
       defer
     ></script>
   </head>
   <body>
-    <h1>Loading Button</h1>
-    <ul class="card-list">
-      <li
-        class="card-list__item card"
-        data-card-id="3"
-      >
-        <img
-          class="card__image"
-          src="/img/card003.jpg"
-          alt=""
-          width="320"
-          height="160"
-        />
-        <button
-          class="card__button"
-          data-button
-          >Good</button
-        >
-        <p
-          class="card__popup-message"
-          data-popup
-        ></p>
-      </li>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__inner">
+          <h1 class="title">Photo square</h1>
+        </div>
+      </header>
 
-      <li
-        class="card-list__item card"
-        data-card-id="2"
-      >
-        <img
-          class="card__image"
-          src="/img/card002.jpg"
-          alt=""
-          width="320"
-          height="160"
-        />
-        <button
-          class="card__button"
-          data-button
-          >Good</button
-        >
-        <p
-          class="card__popup-message"
-          data-popup
-        ></p>
-      </li>
+      <main>
+        <section class="section">
+          <div class="section__inner">
+            <div class="cards">
+              <article
+                class="card cards__item"
+                data-card-id="3"
+              >
+                <h2 class="card__heading">荷車を押す人</h2>
+                <figure class="card__figure">
+                  <img
+                    class="card__image"
+                    src="/assets/img/card003.jpg"
+                    alt=""
+                  />
+                </figure>
+                <p class="card__text"
+                  >仕事へ行くところでしょうか。<br />大きな荷車を押しています。</p
+                >
+                <button
+                  class="good-button card__button"
+                  data-button
+                  >Good</button
+                >
+              </article>
 
-      <li
-        class="card-list__item card"
-        data-card-id="1"
-      >
-        <img
-          class="card__image"
-          src="/img/card001.jpg"
-          alt=""
-          width="320"
-          height="160"
-        />
-        <button
-          class="card__button"
-          data-button
-          >Good</button
-        >
-        <p
-          class="card__popup-message"
-          data-popup
-        ></p>
-      </li>
-    </ul>
+              <article
+                class="card cards__item"
+                data-card-id="2"
+              >
+                <h2 class="card__heading">水上マーケット</h2>
+                <figure class="card__figure">
+                  <img
+                    class="card__image"
+                    src="/assets/img/card002.jpg"
+                    alt=""
+                  />
+                </figure>
+                <p class="card__text"
+                  >水上マーケットが賑わっています。活気がありますね。</p
+                >
+                <button
+                  class="good-button card__button"
+                  data-button
+                  >Good</button
+                >
+              </article>
+
+              <article
+                class="card cards__item"
+                data-card-id="1"
+              >
+                <h2 class="card__heading">ワット・アルン</h2>
+                <figure class="card__figure">
+                  <img
+                    class="card__image"
+                    src="/assets/img/card001.jpg"
+                    alt=""
+                  />
+                </figure>
+                <p class="card__text"
+                  >タイを代表するお寺。<br />チャオプラヤー河、夕日と相まって幻想的な写真になりました。</p
+                >
+                <button
+                  class="good-button card__button"
+                  data-button
+                  >Good</button
+                >
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__inner">
+          <p><small>&copy; 2024</small></p>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
